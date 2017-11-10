@@ -9,10 +9,11 @@ public class Main {
 	
     public static void main(String[] args) {
 
-    	Game game = new Game();
-    	
-    	while(game.Run()){
-    		game = new Game();
-    	}
+          Game game = new Game();
+          game.run(); 
+//    	
+//    	while(game.Run()){
+//    		game = new Game();
+//    	}
     }
 }
