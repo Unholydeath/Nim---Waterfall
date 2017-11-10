@@ -1,9 +1,5 @@
 package group1.csc130.levels;
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 public class Level {
 	
 	public int numRows;
