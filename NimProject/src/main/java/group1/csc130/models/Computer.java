@@ -2,7 +2,7 @@ package group1.csc130.models;
 
 import java.util.Random;
 
-public class Computer {
+public class Computer extends Player {
 	
 	public int maxRowRange;
 	public int maxBeadRange;

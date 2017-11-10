@@ -3,6 +3,8 @@ public class Player {
 	
 	private String m_name;
 	
+	public Player(){}
+	
 	public Player(String newName){
 		m_name = newName;
 	}

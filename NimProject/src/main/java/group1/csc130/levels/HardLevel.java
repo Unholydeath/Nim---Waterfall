@@ -6,7 +6,7 @@ package group1.csc130.levels;
  *
  */
 
-public class HardLevel {
+public class HardLevel extends Level {
 	
 	// private List<char> m_row1; 2 beads
 	// private List<char> m_row2; 3 beads
