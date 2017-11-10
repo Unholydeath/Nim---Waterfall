@@ -56,7 +56,7 @@ public class Game {
 	public void getDifficutly(){
 		
 		String input = "";
-		
+		int difficutly;
 		System.out.println("Please input 1-3 to choose a difficulty");
 		System.out.println("1 - Easy");
 		System.out.println("2 - Medium");
@@ -67,16 +67,20 @@ public class Game {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		if(Integer.parseInt(input) == 1){
+		difficutly = Integer.parseInt(input);
+
+		switch(difficutly){
+            case 1:
 			level = new EasyLevel();
-			
-		} else if (Integer.parseInt(input) == 2){
+            break;
+
+			case 2:
 			level = new MedLevel();
-			
-		} else if (Integer.parseInt(input) == 3){
+            break;
+
+            case 3:
 			level = new HardLevel();
-			
+			break;
 		}
 	}
 }
