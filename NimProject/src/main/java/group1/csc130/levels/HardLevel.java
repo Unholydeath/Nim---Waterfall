@@ -1,6 +1,5 @@
 package group1.csc130.levels;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,11 +9,54 @@ import java.util.List;
  */
 
 public class HardLevel extends Level {
+	
+	private List<Character> m_row1;
+	private List<Character> m_row2;
+	private List<Character> m_row3;
+	private List<Character> m_row4;
+	
 	public HardLevel(){
         super.setNumRows(4);
-    }
-	private List<Character> m_row1 = new ArrayList<>();// 2 beads
-	private List<Character> m_row2 = new ArrayList<>();// 3 beads
-	 private List<Character> m_row3 = new ArrayList<>();// 7 beads
-	 private List<Character> m_row4 = new ArrayList<>();// 8 beads
+	}
+
+	public List<Character> getM_row1() {
+		return m_row1;
+	}
+
+	public void setM_row1(int beads) {
+		for (int i = 0; i < beads; i++){
+			m_row1.add('*');
+		}
+	}
+
+	public List<Character> getM_row2() {
+		return m_row2;
+	}
+
+	public void setM_row2(int beads) {
+		for (int i = 0; i < beads; i++){
+			m_row2.add('*');
+		}
+	}
+
+	public List<Character> getM_row3() {
+		return m_row3;
+	}
+
+	public void setM_row3(int beads) {
+		for (int i = 0; i < beads; i++){
+			m_row1.add('*');
+		}
+	}
+
+	public List<Character> getM_row4() {
+		return m_row4;
+	}
+
+	public void setM_row4(int beads) {
+		for (int i = 0; i < beads; i++){
+			m_row1.add('*');
+		}
+	}
+	
 }
