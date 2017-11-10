@@ -7,6 +7,7 @@ import group1.csc130.levels.EasyLevel;
 import group1.csc130.levels.HardLevel;
 import group1.csc130.levels.Level;
 import group1.csc130.levels.MedLevel;
+import group1.csc130.models.Computer;
 import group1.csc130.models.Player;
 
 /** 
@@ -27,10 +28,11 @@ public class Game {
 	
 	//Contains game code, returns if the player wants to play another game
 	public boolean Run(){
-		
-		boolean playAgain = false;
+         
+        boolean playAgain = false;
 		
 		return playAgain;
+
 	}
 	
 	public boolean ValidateUserMove(){
@@ -42,7 +44,6 @@ public class Game {
 	
 	
 	public void PlayerTurn(Player player){
-		
 	}
 	
 	//Prompts the first player to choose whether they'll play with another person or a computer

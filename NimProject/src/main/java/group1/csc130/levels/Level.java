@@ -7,8 +7,7 @@ public class Level {
 
 	
 	public void PrintBoard(){
-		
-	}
+    }
 	
 	public boolean turnChoice(int row, int numBeads){
 		

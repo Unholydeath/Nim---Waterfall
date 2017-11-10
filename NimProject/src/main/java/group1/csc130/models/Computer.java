@@ -15,12 +15,12 @@ public class Computer extends Player {
 	
 	public void chooseRow(int range){
 		
-		int rowChoice = m_random.nextInt(maxRowRange) + 1;
+		int rowChoice = m_random.nextInt(range) + 1;
 	}
 	
-	public void chooseBeads(int row){
-		
-		int beadChoice = m_random.nextInt(maxBeadRange) + 1;
+	public int chooseBeads(int range){
+        int beadChoice;
+	return beadChoice = m_random.nextInt(range) + 1;
 	}
 
     public int getMaxRowRange() {

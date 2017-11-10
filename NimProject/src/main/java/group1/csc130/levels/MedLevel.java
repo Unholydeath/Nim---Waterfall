@@ -11,6 +11,9 @@ import java.util.List;
 public class MedLevel extends Level {
 	public MedLevel(){
         super.setNumRows(3);
+        setM_row1(2);
+        setM_row2(5);
+        setM_row3(7);
     }
 	 private List<Character> m_row1 = new ArrayList<>();
 
@@ -32,15 +35,25 @@ public class MedLevel extends Level {
         return m_row2;
     }
 
-    public void setM_row2(List<Character> m_row2) {
-        this.m_row2 = m_row2;
+    public void setM_row2(int beads) {
+        for (int i = 0; i < beads; i++) {
+            this.m_row2.add('*');
+        }
     }
 
     public List<Character> getM_row3() {
         return m_row3;
     }
 
-    public void setM_row3(List<Character> m_row3) {
-        this.m_row3 = m_row3;
+    public void setM_row3(int beads) {
+        for (int i = 0; i < beads; i++) {
+            this.m_row3.add('*');
+        }
+    }
+    @Override
+    public void PrintBoard(){
+        System.out.println(this.getM_row1());
+        System.out.println(this.getM_row2());
+        System.out.println(this.getM_row3());
     }
 }
