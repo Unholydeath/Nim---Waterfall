@@ -34,7 +34,12 @@ public class Game {
 		 
 		do{ 
 			System.out.println("Choose your opponent player! \n\t1.) Player vs Player\n\t2.) Player vs Computer");
-			setOpponentType(); 
+			try {
+				setOpponentType();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 			getDifficutly(); 
 	
 		}while(!playAgain); 
@@ -54,7 +59,7 @@ public class Game {
 	
 	//Prompts the first player to choose whether they'll play with another person or a computer
 	//Asks for input, parses it, and instantiates player2
-	public void setOpponentType(){
+	public void setOpponentType() throws IOException{
 		int playerChoice = 0;
 		boolean isValid = false;  
 		
