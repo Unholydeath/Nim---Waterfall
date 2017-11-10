@@ -2,6 +2,7 @@ package group1.csc130.levels;
 public class Level {
 	
 	public int numRows;
+
 	
 	public void PrintBoard(){
 		
@@ -26,5 +27,13 @@ public class Level {
 		int beads = 0;
 		
 		return beads;
+	}
+
+	public int getNumRows() {
+		return numRows;
+	}
+
+	public void setNumRows(int numRows) {
+		this.numRows = numRows;
 	}
 }

@@ -7,7 +7,9 @@ package group1.csc130.levels;
  */
 
 public class HardLevel extends Level {
-	
+	public HardLevel(){
+        super.setNumRows(4);
+    }
 	// private List<char> m_row1; 2 beads
 	// private List<char> m_row2; 3 beads
 	// private List<char> m_row3; 7 beads
