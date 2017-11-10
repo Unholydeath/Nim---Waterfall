@@ -10,7 +10,6 @@ import java.util.List;
  */
 public class MedLevel extends Level {
 	public MedLevel(){
-        super.setNumRows(3);
         setM_row1(2);
         setM_row2(5);
         setM_row3(7);

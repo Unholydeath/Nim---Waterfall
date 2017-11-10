@@ -1,10 +1,6 @@
 package group1.csc130.levels;
 
-public class Level {
-	
-	public int numRows;
-
-	
+public abstract class Level {
 	public void PrintBoard(){
     }
 	
@@ -30,10 +26,8 @@ public class Level {
 	}
 
 	public int getNumRows() {
-		return numRows;
+		return 0;
 	}
 
-	public void setNumRows(int numRows) {
-		this.numRows = numRows;
-	}
+
 }

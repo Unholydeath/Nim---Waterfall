@@ -17,7 +17,10 @@ public class HardLevel extends Level {
 	private List<Character> m_row4 = new ArrayList<>();
 	
 	public HardLevel(){
-        super.setNumRows(4);
+        setM_row1(2);
+        setM_row2(3);
+        setM_row3(8);
+        setM_row4(9);
 	}
 
 	public List<Character> getM_row1() {
@@ -59,5 +62,22 @@ public class HardLevel extends Level {
 			m_row1.add('*');
 		}
 	}
+    @Override
+    public void PrintBoard(){
+        System.out.println(this.getM_row1());
+        System.out.println(this.getM_row2());
+        System.out.println(this.getM_row3());
+        System.out.println(this.getM_row4());
+    }
+
+    @Override
+    public int getNumRows(){
+        return 4;
+    }
+
+    @Override
+    public int getBeadAmount(int row){
+
+    }
 	
 }
