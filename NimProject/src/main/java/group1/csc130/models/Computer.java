@@ -15,9 +15,11 @@ public class Computer extends Player {
 	
 	public void chooseRow(int range){
 		
+		int rowChoice = m_random.nextInt(range) + 1;
 	}
 	
 	public void chooseBeads(int row, int range){
 		
+		int beadChoice = m_random.nextInt(range) + 1;
 	}
 }

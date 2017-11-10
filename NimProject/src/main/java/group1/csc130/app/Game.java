@@ -1,8 +1,12 @@
 package group1.csc130.app;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 
+import group1.csc130.levels.EasyLevel;
+import group1.csc130.levels.HardLevel;
 import group1.csc130.levels.Level;
+import group1.csc130.levels.MedLevel;
 import group1.csc130.models.Player;
 
 /** 
@@ -51,5 +55,28 @@ public class Game {
 	//Asks for input, parses it, and instantiates level
 	public void getDifficutly(){
 		
+		String input = "";
+		
+		System.out.println("Please input 1-3 to choose a difficulty");
+		System.out.println("1 - Easy");
+		System.out.println("2 - Medium");
+		System.out.println("3 - Hard");
+		try {
+			input = reader.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(Integer.parseInt(input) == 1){
+			level = new EasyLevel();
+			
+		} else if (Integer.parseInt(input) == 2){
+			level = new MedLevel();
+			
+		} else if (Integer.parseInt(input) == 3){
+			level = new HardLevel();
+			
+		}
 	}
 }
