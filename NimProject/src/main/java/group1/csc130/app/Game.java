@@ -28,7 +28,7 @@ public class Game {
 	
 	//Contains game code, returns if the player wants to play another game
 	public boolean Run(){
-         
+
         boolean playAgain = false;
 		
 		return playAgain;

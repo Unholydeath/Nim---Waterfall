@@ -1,5 +1,6 @@
 package group1.csc130.levels;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,10 +11,10 @@ import java.util.List;
 
 public class HardLevel extends Level {
 	
-	private List<Character> m_row1;
-	private List<Character> m_row2;
-	private List<Character> m_row3;
-	private List<Character> m_row4;
+	private List<Character> m_row1 = new ArrayList<>();
+	private List<Character> m_row2 = new ArrayList<>();
+	private List<Character> m_row3 = new ArrayList<>();
+	private List<Character> m_row4 = new ArrayList<>();
 	
 	public HardLevel(){
         super.setNumRows(4);
