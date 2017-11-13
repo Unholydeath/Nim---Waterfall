@@ -49,7 +49,7 @@ public class HardLevel extends Level {
 
 	public void setRow3(int beads) {
 		for (int i = 0; i < beads; i++){
-			m_row1.add('*');
+			m_row3.add('*');
 		}
 	}
 
@@ -59,7 +59,7 @@ public class HardLevel extends Level {
 
 	public void setRow4(int beads) {
 		for (int i = 0; i < beads; i++){
-			m_row1.add('*');
+			m_row4.add('*');
 		}
 	}
     @Override
@@ -98,20 +98,24 @@ public class HardLevel extends Level {
     	switch(row){
     	case 1:
     		for(int i = 0; i < numBeads; i++){
-    			m_row1.remove('*');
+    			m_row1.remove(0);
     		}
+    		break;
     	case 2:
     		for(int i = 0; i < numBeads; i++){
-    			m_row2.remove('*');
+    			m_row2.remove(0);
     		}
+    		break;
     	case 3:
     		for(int i = 0; i < numBeads; i++){
-    			m_row3.remove('*');
+    			m_row3.remove(0);
     		}
+    		break;
     	case 4:
     		for(int i = 0; i < numBeads; i++){
-    			m_row4.remove('*');
+    			m_row4.remove(0);
     		}
+    		break;
     	}
     }
     

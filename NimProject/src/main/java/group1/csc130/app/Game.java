@@ -27,7 +27,8 @@ public class Game {
 	 
 	boolean isWinner = false;
 	boolean player1Turn = true;
-	
+	boolean continueGame = true;
+
 	//Contains game code, returns if the player wants to play another game
 	public boolean run(){
 		boolean playAgain = false;
@@ -74,19 +75,24 @@ public class Game {
 				} else{
 					System.out.println(player1.getName() + " is the winner!");
 				}
-				
-				String choice = "";
-				System.out.println("Would you like to play again? y - yes  n - no");
-				try {
-					choice = reader.readLine();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				if(choice.compareTo("y") == 0 || choice.compareTo("Y") == 0){
-					playAgain = true;
-				}
-				playingGame = false;
+
+				while (continueGame) {
+                    String choice = "";
+                    System.out.println("Would you like to play again? y - yes  n - no");
+                    try {
+                        choice = reader.readLine();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    if (choice.equalsIgnoreCase("y")) {
+                        playAgain = true;
+                        playingGame = true;
+                    } else if (choice.equalsIgnoreCase("n")){
+                        playAgain = false;
+                        playingGame = false;
+                    }
+                }
 				
 			} else{
 				level.PrintBoard();
@@ -120,6 +126,11 @@ public class Game {
 					validMove = true;
 				}
 			}
+			else {
+                System.out.println("Enter a valid move \n\t");
+                level.PrintBoard();
+                System.out.println();
+            }
 		} catch (Exception e){
 			
 		}
@@ -130,18 +141,17 @@ public class Game {
 	
 	public void PlayerTurn(Player player) throws IOException{
 		
-		if(player.getType() == PlayerType.PLAYER){
-			
-			boolean makingMove = true;
-			
-			while(makingMove){
-				
-				if(validateUserMove()){
-					makingMove = false;
-				}
-			}
-			
-		} else{
+		if(player.getType() == PlayerType.PLAYER) {
+
+            boolean makingMove;
+
+            do {
+               makingMove = validateUserMove();
+
+            }while (!makingMove);
+        }
+
+        else{
 			
 			boolean choosingBeads = true;
 			int rowNum = 0;
@@ -238,4 +248,5 @@ public class Game {
 			}
 		}
 	}
+
 }

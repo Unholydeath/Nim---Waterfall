@@ -80,16 +80,19 @@ public class MedLevel extends Level {
     	switch(row){
     	case 1:
     		for(int i = 0; i < numBeads; i++){
-    			m_row1.remove('*');
+    			m_row1.remove(0);
     		}
+    		break;
     	case 2:
     		for(int i = 0; i < numBeads; i++){
-    			m_row2.remove('*');
+    			m_row2.remove(0);
     		}
+    		break;
     	case 3:
     		for(int i = 0; i < numBeads; i++){
-    			m_row3.remove('*');
+    			m_row3.remove(0);
     		}
+    		break;
     	}
     }
     
