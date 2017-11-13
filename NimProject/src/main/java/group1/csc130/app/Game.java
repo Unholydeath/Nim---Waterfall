@@ -87,10 +87,9 @@ public class Game {
                     }
                     if (choice.compareToIgnoreCase("y") == 0) {
                         playAgain = true;
-
+                        continueGame = false;
                     } else if (choice.compareToIgnoreCase("n") == 0){
                         playAgain = false;
-                        playingGame = false;
                         continueGame = false;
                     }
                 }
@@ -219,6 +218,7 @@ public class Game {
 	public void getDifficutly(){
 		
 		String input = "";
+		int choice = 0;
 		boolean makingSelection = true;
 		
 		while (makingSelection){
@@ -230,20 +230,28 @@ public class Game {
 			
 			try {
 				input = reader.readLine();
-			} catch (IOException e) {
+                choice = Integer.parseInt(input);
+			} catch (IOException e){
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			if(Integer.parseInt(input) == 1){
+			catch (NumberFormatException e){
+                System.out.println("Enter a valid input");
+                System.out.println();
+            }
+
+
+			if(choice <= 3 &&  choice > 0)
+
+			    if(choice == 1){
 				level = new EasyLevel();
 				makingSelection = false;
 				
-			} else if (Integer.parseInt(input) == 2){
+			} else if (choice == 2){
 				level = new MedLevel();
 				makingSelection = false;
 				
-			} else if (Integer.parseInt(input) == 3){
+			} else if (choice == 3){
 				level = new HardLevel();
 				makingSelection = false;
 			}
