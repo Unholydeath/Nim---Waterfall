@@ -86,8 +86,9 @@ public class Game {
                         e.printStackTrace();
                     }
                     if (choice.compareToIgnoreCase("y") == 0) {
-                        playAgain = true;
+                        playAgain = false;
                         continueGame = false;
+                        run();
                     } else if (choice.compareToIgnoreCase("n") == 0){
                         playAgain = false;
                         continueGame = false;
@@ -155,7 +156,7 @@ public class Game {
 			
 			boolean choosingBeads = true;
 			int rowNum = 0;
-			int maxBeads = 0;
+			int maxBeads;
 			int beadNum = 0;
 			
 			while(choosingBeads){
