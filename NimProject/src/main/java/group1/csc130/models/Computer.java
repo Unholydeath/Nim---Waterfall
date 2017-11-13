@@ -11,6 +11,18 @@ public class Computer extends Player {
 	
 	public Computer(){
 		m_random = new Random();
+		setName("Computer");
+		setType(PlayerType.COMPUTER);
+	}
+	
+	@Override
+	public int makeRowChoice(int numRows){
+		return chooseRow(numRows);
+	}
+	
+	@Override
+	public int makeBeadChoice(int maxBeads){
+		return chooseBeads(maxBeads);
 	}
 	
 	public int chooseRow(int range){

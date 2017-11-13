@@ -10,49 +10,96 @@ import java.util.List;
  */
 public class MedLevel extends Level {
 	public MedLevel(){
-        setM_row1(2);
-        setM_row2(5);
-        setM_row3(7);
+        setRow1(2);
+        setRow2(5);
+        setRow3(7);
     }
 	 private List<Character> m_row1 = new ArrayList<>();
-
 	 private List<Character> m_row2 = new ArrayList<>();
-
 	 private List<Character> m_row3 = new ArrayList<>();
 
-    public List<Character> getM_row1() {
+    public List<Character> getRow1() {
         return m_row1;
     }
 
-    public void setM_row1(int beads) {
+    public void setRow1(int beads) {
         for (int i = 0; i < beads; i++) {
             this.m_row1.add('*');
         }
     }
 
-    public List<Character> getM_row2() {
+    public List<Character> getRow2() {
         return m_row2;
     }
 
-    public void setM_row2(int beads) {
+    public void setRow2(int beads) {
         for (int i = 0; i < beads; i++) {
             this.m_row2.add('*');
         }
     }
 
-    public List<Character> getM_row3() {
+    public List<Character> getRow3() {
         return m_row3;
     }
 
-    public void setM_row3(int beads) {
+    public void setRow3(int beads) {
         for (int i = 0; i < beads; i++) {
             this.m_row3.add('*');
         }
     }
     @Override
     public void PrintBoard(){
-        System.out.println(this.getM_row1());
-        System.out.println(this.getM_row2());
-        System.out.println(this.getM_row3());
+        System.out.println("1 - " + this.getRow1());
+        System.out.println("2 - " + this.getRow2());
+        System.out.println("3 - " + this.getRow3());
+    }
+    
+    @Override
+    public int getNumRows(){
+        return 3;
+    }
+
+    @Override
+    public int getBeadAmount(int row){
+
+    	switch(row){
+    	case 1:
+    		return m_row1.size();
+    	case 2:
+    		return m_row2.size();
+    	case 3:
+    		return m_row3.size();
+    	default:
+    		return 0;
+    	}	
+    }
+    
+    @Override
+    public void removeBeads(int row, int numBeads){
+    	
+    	switch(row){
+    	case 1:
+    		for(int i = 0; i < numBeads; i++){
+    			m_row1.remove('*');
+    		}
+    	case 2:
+    		for(int i = 0; i < numBeads; i++){
+    			m_row2.remove('*');
+    		}
+    	case 3:
+    		for(int i = 0; i < numBeads; i++){
+    			m_row3.remove('*');
+    		}
+    	}
+    }
+    
+    @Override
+    public boolean WinCheck(){
+    	boolean hasWon = false;
+    	
+    	if(m_row1.size() == 0 && m_row2.size() == 0 && m_row3.size() == 0){
+    		hasWon = true;
+    	}    	
+    	return hasWon;
     }
 }

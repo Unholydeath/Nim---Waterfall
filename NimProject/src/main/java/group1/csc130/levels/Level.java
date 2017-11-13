@@ -11,12 +11,7 @@ public abstract class Level {
 		return result;
 	}
 	
-	public boolean WinCheck(){
-		
-		boolean gameOver = false;
-		
-		return gameOver;
-	}
+	public boolean WinCheck(){return false;}
 	
 	public int getBeadAmount(int row){
 		
@@ -29,5 +24,5 @@ public abstract class Level {
 		return 0;
 	}
 
-
+	public void removeBeads(int row, int numBeads){}
 }

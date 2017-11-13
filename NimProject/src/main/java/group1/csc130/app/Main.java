@@ -9,11 +9,11 @@ public class Main {
 	
     public static void main(String[] args) {
 
-          Game game = new Game();
-          game.run(); 
-//    	
-//    	while(game.Run()){
-//    		game = new Game();
-//    	}
+    	boolean keepPlaying = true;
+    	
+    	while(keepPlaying){
+    		Game game = new Game();
+            keepPlaying = game.run();
+    	}
     }
 }
