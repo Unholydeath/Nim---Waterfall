@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 
  * @author Unholydeath
- *
+ * @author Isaiah Camara
  */
 public class MedLevel extends Level {
 	public MedLevel(){
@@ -54,5 +54,31 @@ public class MedLevel extends Level {
         System.out.println(this.getM_row1());
         System.out.println(this.getM_row2());
         System.out.println(this.getM_row3());
+    }
+    @Override
+    public int getNumRows(){
+        return 3;
+    }
+
+    @Override
+    public int getBeadAmount(int row){
+        int heaps = 0 ;
+        switch (row) {
+            case 1:
+                heaps = m_row1.size();
+                break;
+            case 2:
+                heaps = m_row2.size();
+                break;
+            case 3:
+                heaps = m_row3.size();
+                break;
+        }
+        return heaps;
+    }
+
+    @Override
+    public boolean turnChoice(int row, int numbeads){
+
     }
 }

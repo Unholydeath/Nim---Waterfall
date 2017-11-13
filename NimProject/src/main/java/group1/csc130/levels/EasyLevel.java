@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 
  * @author Unholydeath
- *
+ * @author Isaiah Camara
  */
 public class EasyLevel extends Level {
 	
@@ -37,5 +37,29 @@ public class EasyLevel extends Level {
 		for(int i = 0; i < beads; i++){
 			m_row2.add('*');
 		}
+	}
+
+	@Override
+	public int getNumRows(){
+		return 2;
+	}
+
+	@Override
+	public int getBeadAmount(int row){
+		int heaps = 0 ;
+		switch (row) {
+			case 1:
+				heaps = m_row1.size();
+				break;
+			case 2:
+				heaps = m_row2.size();
+				break;
+		}
+		return heaps;
+	}
+
+	@Override
+	public boolean turnChoice(int row, int numbeads){
+
 	}
 }

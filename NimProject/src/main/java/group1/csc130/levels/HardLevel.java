@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 
  * @author Unholydeath
- *
+ * @author Isaiah Camara
  */
 
 public class HardLevel extends Level {
@@ -77,6 +77,26 @@ public class HardLevel extends Level {
 
     @Override
     public int getBeadAmount(int row){
+		int heaps = 0 ;
+            switch (row) {
+                case 1:
+                    heaps = m_row1.size();
+                    break;
+                case 2:
+                    heaps = m_row2.size();
+                    break;
+                case 3:
+                    heaps = m_row3.size();
+                    break;
+                case 4:
+                    heaps = m_row4.size();
+                    break;
+            }
+        return heaps;
+    }
+
+    @Override
+    public boolean turnChoice(int row, int numbeads){
 
     }
 	
