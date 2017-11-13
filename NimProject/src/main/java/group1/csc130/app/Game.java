@@ -85,12 +85,13 @@ public class Game {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
-                    if (choice.equalsIgnoreCase("y")) {
+                    if (choice.compareToIgnoreCase("y") == 0) {
                         playAgain = true;
-                        playingGame = true;
-                    } else if (choice.equalsIgnoreCase("n")){
+
+                    } else if (choice.compareToIgnoreCase("n") == 0){
                         playAgain = false;
                         playingGame = false;
+                        continueGame = false;
                     }
                 }
 				
