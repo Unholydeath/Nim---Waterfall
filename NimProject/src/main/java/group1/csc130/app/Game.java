@@ -185,7 +185,8 @@ public class Game {
 				if(Integer.parseInt(playerChoice) == 1 || Integer.parseInt(playerChoice) == 2){
 					isValid = true; 					
 				}
-			} catch (IOException e) {System.out.println("Invalid input. Please choose between 1 & 2.");} 			
+			} catch (IOException e) {System.out.println("Invalid input. Please choose between 1 & 2.");}
+			catch (NumberFormatException e){System.out.println("Invalid input. Please choose between 1 & 2.");}
 		}
 		
 		int choice = Integer.parseInt(playerChoice);

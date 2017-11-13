@@ -31,18 +31,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/group1/csc130/app/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="237" column="44" lean-forward="true" selection-start-line="237" selection-start-column="44" selection-end-line="237" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NumberFormatException.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/NumberFormatException.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="2370">
+              <caret line="188" column="110" lean-forward="false" selection-start-line="188" selection-start-column="110" selection-end-line="188" selection-end-column="110" />
               <folding />
             </state>
           </provider>
@@ -434,12 +424,12 @@
       <workItem from="1510009831436" duration="21000" />
       <workItem from="1510010029796" duration="53000" />
       <workItem from="1510608912723" duration="213000" />
-      <workItem from="1510610122257" duration="4391000" />
+      <workItem from="1510610122257" duration="4906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11233000" />
+    <option name="totallyTimeSpent" value="11748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="103" y="192" width="2289" height="1248" extended-state="0" />
@@ -692,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/group1/csc130/app/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="237" column="44" lean-forward="true" selection-start-line="237" selection-start-column="44" selection-end-line="237" selection-end-column="44" />
+        <state relative-caret-position="2370">
+          <caret line="188" column="110" lean-forward="false" selection-start-line="188" selection-start-column="110" selection-end-line="188" selection-end-column="110" />
           <folding />
         </state>
       </provider>
