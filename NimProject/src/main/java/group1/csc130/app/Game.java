@@ -47,10 +47,11 @@ public class Game {
 		
 		while(playingGame){
 			
-			System.out.println("It's " + player1.getName() + "'s turn");
+
 			
 			if(player1Turn){
 				try {
+					System.out.println("It's " + player1.getName() + "'s turn");
 					PlayerTurn(player1);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -58,6 +59,7 @@ public class Game {
 				}
 			} else{
 				try {
+					System.out.println("It's " + player2.getName() + "'s turn");
 					PlayerTurn(player2);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -191,6 +193,7 @@ public class Game {
 				player1 = new Player();
 				player1.setName(reader.readLine());
 				player2 = new Computer();
+				player2.setName("Computer");
 				break;
 		}
 	}
