@@ -100,6 +100,29 @@ public class Game {
 	public boolean validateUserMove(){
 		
 		boolean validMove = false;
+		String input = "";
+		
+		try{
+			System.out.println("Please input a row number");
+			input = reader.readLine();
+			
+			if(Integer.parseInt(input) <= level.getNumRows() && Integer.parseInt(input) > 0){
+				
+				int row = Integer.parseInt(input);
+				
+				System.out.println("Please select a number of beads to remove");
+				input = reader.readLine();
+				
+				if(Integer.parseInt(input) <= level.getBeadAmount(row) && Integer.parseInt(input) > 0){
+					
+					int numBeads = Integer.parseInt(input);
+					level.removeBeads(row, numBeads);
+					validMove = true;
+				}
+			}
+		} catch (Exception e){
+			
+		}
 		
 		return validMove;
 	}
@@ -109,30 +132,12 @@ public class Game {
 		
 		if(player.getType() == PlayerType.PLAYER){
 			
-			String input = "";
 			boolean makingMove = true;
 			
 			while(makingMove){
-				try{
-					System.out.println("Please input a row number");
-					input = reader.readLine();
-					
-					if(Integer.parseInt(input) <= level.getNumRows() && Integer.parseInt(input) > 0){
-						
-						int row = Integer.parseInt(input);
-						
-						System.out.println("Please select a number of beads to remove");
-						input = reader.readLine();
-						
-						if(Integer.parseInt(input) <= level.getBeadAmount(row) && Integer.parseInt(input) > 0){
-							
-							int numBeads = Integer.parseInt(input);
-							level.removeBeads(row, numBeads);
-							makingMove = false;
-						}
-					}
-				} catch (Exception e){
-					
+				
+				if(validateUserMove()){
+					makingMove = false;
 				}
 			}
 			
