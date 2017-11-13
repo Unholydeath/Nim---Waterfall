@@ -11,12 +11,16 @@ import group1.csc130.levels.MedLevel;
 import group1.csc130.models.Computer;
 import group1.csc130.models.Player;
 import group1.csc130.models.Player.PlayerType;
- 
-/** 
- * 
- * @author Unholydeath
- *
- */ 
+
+/**
+ * The game class manages all actions that occur within one play session. The
+ * game contains two players, a level that change based on user input at the
+ * start of the session, and a bufferedreader to receive player input. The game
+ * has two booleans, player1Turn to determine if it’s player one’s turn, and
+ * isWinner for if the game has ended. The game also has a run function that
+ * holds the game’s logic.
+ */
+
 public class Game {
 	
 	Player player1;
@@ -30,6 +34,10 @@ public class Game {
 	boolean continueGame = true;
 
 	//Contains game code, returns if the player wants to play another game
+    /**
+     *The run method holds all the main logic if the game to have the game run
+     *@return boolean playAgain -  Returns if the player wants to play another game
+     */
 	public boolean run(){
 		boolean playAgain = false;
 		boolean playingGame = true;
@@ -103,8 +111,12 @@ public class Game {
 		}
 		return playAgain;
 	}
-	
-	public boolean validateUserMove(){
+    /**
+     * The run method holds all the main logic if the game to have the game run
+     *@return boolean validMove -  Returns if the player gave a row number and number of beads
+     */
+
+    public boolean validateUserMove(){
 		
 		boolean validMove = false;
 		String input = "";
@@ -138,9 +150,15 @@ public class Game {
 		
 		return validMove;
 	}
-	
-	
-	public void PlayerTurn(Player player) throws IOException{
+
+    /**
+     *The playerTurn method takes in a player and run all the method calls for the
+     *players turn checks if the players input is valid and if the move they request is
+     *valid as well, also checks if there is a winner. It returns void
+     *@pram Player player - this is the current player who is taking their turn
+     */
+
+    public void PlayerTurn(Player player) throws IOException{
 		
 		if(player.getType() == PlayerType.PLAYER) {
 
@@ -175,7 +193,13 @@ public class Game {
 	
 	//Prompts the first player to choose whether they'll play with another person or a computer
 	//Asks for input, parses it, and instantiates player2
-	public void setOpponentType() throws IOException{
+    /**
+     *The setOpponetType method sets the player2 variable to a player
+     *or computer based on the player1’s choice they pass to the method
+     *@pram int typeChoice- the type of player they want to play against
+     */
+
+    public void setOpponentType() throws IOException{
 		String playerChoice = "";
 		boolean isValid = false;  
 		
@@ -217,7 +241,12 @@ public class Game {
 	
 	//Prompts the first player what difficulty of the level they want.
 	//Asks for input, parses it, and instantiates level
-	public void getDifficutly(){
+    /**
+     * Instantiates level based on the difficulty option.
+     * @pram int difficulty - Difficulty the player wants (already parsed).
+     */
+
+    public void getDifficutly(){
 		
 		String input = "";
 		int choice = 0;
