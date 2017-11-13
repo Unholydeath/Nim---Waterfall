@@ -17,6 +17,9 @@ public class EasyLevel extends Level {
 	private List<Character> m_row1 = new ArrayList<>();
 	private List<Character> m_row2 = new ArrayList<>();
 	
+	/**
+	 * Instantiates m_row1 and m_row2 by calling their setters with a desired number of characters
+	 */
 	public EasyLevel(){
 		setRow1(3);
 		setRow2(3);
@@ -77,7 +80,7 @@ public class EasyLevel extends Level {
     }
 
 	/**
-	 * Returns the size of the list requested, using a switch
+	 * Returns the size of the list requested, using a switch statement
 	 * @param int row - number of requested List<Character>
 	 */
     @Override

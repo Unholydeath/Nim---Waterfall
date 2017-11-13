@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * HardLevel is a child class of Level. It has 4 lists of characters that symbolize rows of a game board.
+ * It implements methods from Level: removeBeads(int row, int beads) to remove a number of characters from the given list,
+ * printBoard() to print the lists to the console, getNumRows() to return the number of lists, getBeadAmount(int row)
+ * to return the number of beads in the given row, and winCheck() to determine if all the rows are empty.
  * 
- * @author Unholydeath
+ * @author Braden Bodily, Tina Moore, Isaiah Camara
  *
  */
 
@@ -16,6 +20,9 @@ public class HardLevel extends Level {
 	private List<Character> m_row3 = new ArrayList<>();
 	private List<Character> m_row4 = new ArrayList<>();
 	
+	/**
+	 * Instantiates m_row1, m_row2, m_row3, and m_row4 by calling setRow#(int numBeads) with a desired number of characters
+	 */
 	public HardLevel(){
         setRow1(2);
         setRow2(3);
@@ -23,45 +30,81 @@ public class HardLevel extends Level {
         setRow4(9);
 	}
 
+	/**
+	 * Returns the List<Character> m_row1
+	 * @return List<Character> m_row1
+	 */
 	public List<Character> getRow1() {
 		return m_row1;
 	}
 
+	/**
+	 * Adds a number of '*' characters to m_row1, representing beads based on the number of beads given
+	 * @param int beads - number of characters to add to m_row1
+	 */
 	public void setRow1(int beads) {
 		for (int i = 0; i < beads; i++){
 			m_row1.add('*');
 		}
 	}
 
+	/**
+	 * Returns the List<Character> m_row2
+	 * @return List<Character> m_row2;
+	 */
 	public List<Character> getRow2() {
 		return m_row2;
 	}
 
+	/**
+	 * Adds a number of '*' characters to m_row2, representing beads based on the number of beads given
+	 * @param int beads - number of characters to add to m_row2
+	 */
 	public void setRow2(int beads) {
 		for (int i = 0; i < beads; i++){
 			m_row2.add('*');
 		}
 	}
 
+	/**
+	 * Returns the List<Character> m_row3
+	 * @return List<Character> m_row3;
+	 */
 	public List<Character> getRow3() {
 		return m_row3;
 	}
 
+	/**
+	 * Adds a number of '*' characters to m_row3, representing beads based on the number of beads given
+	 * @param int beads - number of characters to add to m_row3
+	 */
 	public void setRow3(int beads) {
 		for (int i = 0; i < beads; i++){
 			m_row3.add('*');
 		}
 	}
 
+	/**
+	 * Returns the List<Character> m_row4
+	 * @return List<Character> m_row4;
+	 */
 	public List<Character> getRow4() {
 		return m_row4;
 	}
 
+	/**
+	 * Adds a number of '*' characters to m_row4, representing beads based on the number of beads given
+	 * @param int beads - number of characters to add to m_row4
+	 */
 	public void setRow4(int beads) {
 		for (int i = 0; i < beads; i++){
 			m_row4.add('*');
 		}
 	}
+	
+	/**
+	 * Prints a visual representation of List<Character> m_row1, List<Character> m_row2, List<Character> m_row3 to the console
+	 */
     @Override
     public void PrintBoard(){
         System.out.println("1 - " + this.getRow1());
@@ -70,11 +113,19 @@ public class HardLevel extends Level {
         System.out.println("4 - " + this.getRow4());
     }
 
+    /**
+	 * Returns the number of List<Character> rows
+	 * @return int - number of rows
+	 */
     @Override
     public int getNumRows(){
         return 4;
     }
 
+    /**
+	 * Returns the size of the list requested, using a switch statement
+	 * @param int row - number of requested List<Character>
+	 */
     @Override
     public int getBeadAmount(int row){
 
@@ -92,6 +143,11 @@ public class HardLevel extends Level {
     	}	
     }
     
+    /**
+     * Removes a number of beads (int numBeads) from the requested List<Character> (row)
+     * @param int row - number of request List<Character>
+     * @param int numBeads - number of characters to remove
+     */
     @Override
     public void removeBeads(int row, int numBeads){
     	
@@ -119,6 +175,10 @@ public class HardLevel extends Level {
     	}
     }
     
+    /**
+     * Returns true if m_row1, m_row2, m_row3, and m_row4 are empty, otherwise returns false
+     * @return boolean hasWon - if the lists m_row1, m_row2, m_row3, and m_row4 are empty
+     */
     @Override
     public boolean WinCheck(){
     	boolean hasWon = false;
