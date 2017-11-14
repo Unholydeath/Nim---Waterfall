@@ -1,24 +1,10 @@
 package group1.csc130.models;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import group1.csc130.models.Player.PlayerType;
-
-<<<<<<< Updated upstream
-public class PlayerTest {
-    Player player = new Player();
-    @Test
-    public void testGetName() throws Exception {
-    player.setName("Isaiah");
-    assertEquals(player.getName(),"Isaiah","Isaiah");
-    }
-
-    @Test
-    public void setName() throws Exception {
-    }
-=======
-import static org.junit.Assert.*;
->>>>>>> Stashed changes
 
 /**
  * Contains the testing methods of the Player class
