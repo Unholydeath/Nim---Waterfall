@@ -5,8 +5,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PlayerTest {
+    Player player = new Player();
     @Test
-    public void getName() throws Exception {
+    public void testGetName() throws Exception {
+    player.setName("Isaiah");
+    assertEquals(player.getName(),"Isaiah","Isaiah");
     }
 
     @Test
