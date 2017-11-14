@@ -64,5 +64,11 @@ public abstract class Level {
 		return 0;
 	}
 
+	/**
+	 * The removeBeads method removes the beads from the list
+     * in the level
+	 * @param row - the row they want to remove the beads from
+	 * @param numBeads - the number of beads they want to remove
+	 */
 	public void removeBeads(int row, int numBeads){}
 }
