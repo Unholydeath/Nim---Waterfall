@@ -56,8 +56,6 @@ public class Game {
 		
 		while(playingGame){
 			
-
-			
 			if(player1Turn){
 				try {
 					System.out.println("It's " + player1.getName() + "'s turn");
@@ -94,12 +92,13 @@ public class Game {
                         e.printStackTrace();
                     }
                     if (choice.compareToIgnoreCase("y") == 0) {
-                        playAgain = false;
+                        playAgain = true;
                         continueGame = false;
-                        run();
+                        playingGame = false;
                     } else if (choice.compareToIgnoreCase("n") == 0){
                         playAgain = false;
                         continueGame = false;
+                        playingGame = false;
                     }
                 }
 				
