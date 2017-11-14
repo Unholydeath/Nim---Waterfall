@@ -336,7 +336,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestSettingRow3To3(){
     	HardLevel hardLevel = new HardLevel();
     	hardLevel.setRow3(3);
-    	assertEquals((int)3, hardLevel.getBeadAmount(3));
+    	assertEquals(3, hardLevel.getBeadAmount(3));
     }
     
     /**
@@ -347,7 +347,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestSettingRow3To0(){
     	HardLevel hardLevel = new HardLevel();
     	hardLevel.setRow3(0);
-    	assertEquals((int)0, hardLevel.getBeadAmount(3));
+    	assertEquals(0, hardLevel.getBeadAmount(3));
     }
     
     /**
@@ -360,7 +360,38 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	hardLevel.setRow3(-6);
     	assertEquals(currentBeads, hardLevel.getBeadAmount(3));
     }
-    
+    /**
+     * The function should return 4, the new amount that was given
+     * The function SHOULD FAIL because the setRow function doesn't clear the list
+     */
+    @Test
+    public void TestSettingRow4To4(){
+        HardLevel hardLevel = new HardLevel();
+        hardLevel.setRow4(4);
+        assertEquals(4, hardLevel.getBeadAmount(4));
+    }
+
+    /**
+     * The function should return 0, the desired amount
+     * The function SHOULD FAIL because the setRow function doesn't clear the list when called
+     */
+    @Test
+    public void TestSettingRow4To0(){
+        HardLevel hardLevel = new HardLevel();
+        hardLevel.setRow4(0);
+        assertEquals(0, hardLevel.getBeadAmount(4));
+    }
+
+    /**
+     * The function doesn't allow for negatives, so the functions shouldn't change the original value
+     */
+    @Test
+    public void TestSettingRow4ToNegative(){
+        HardLevel hardLevel = new HardLevel();
+        int currentBeads = hardLevel.getBeadAmount(4);
+        hardLevel.setRow4(-6);
+        assertEquals(currentBeads, hardLevel.getBeadAmount(4));
+    }
     /**
      * WinCheck should return true since all lists are empty
      */
@@ -368,8 +399,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TesWinCheckAllRowsEmpty(){
     	Level level = new HardLevel();
     	level.removeBeads(1, 2);
-    	level.removeBeads(2, 5);
-    	level.removeBeads(3, 7);
+    	level.removeBeads(2, 3);
+    	level.removeBeads(3, 8);
+    	level.removeBeads(4, 9);
     	assertTrue(level.WinCheck());
     }
     
