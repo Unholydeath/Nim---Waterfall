@@ -4,7 +4,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 public class EasyLevelTest {
+	
+	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
 	/**
 	 * Should return 2, the number of rows of an easy level board
@@ -243,7 +248,141 @@ public class EasyLevelTest {
     	assertFalse(level.WinCheck());
     }
 
+    /**
+     * Sets up for console printing tests
+     */
     @Test
-    public void printBoard() throws Exception {
+    public void setUpStream() {
+        System.setOut(new PrintStream(outContent));
+    }
+    
+    /**
+     * Clean up for console printing tests
+     */
+    @Test
+    public void cleanUpStream() {
+        System.setOut(null);
+    }
+    
+    /**
+     * Tests the default printBoard function
+     */
+    @Test
+    public void TestPrintNormalBoard(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	String board = "1 - [*, *, *]\n2 - [*, *, *]";
+    	level.PrintBoard();
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the printBoard function if there are no beads present
+     */
+    @Test
+    public void TestPrintEmptyBoard(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(1, 3);
+    	level.removeBeads(2, 3);
+    	String board = "1 - []\n2 - []";
+    	level.PrintBoard();
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the print function if the first row is empty, but the second is full
+     */
+    @Test
+    public void TestPrintEmptyRow1FullRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(1, 3);
+    	String board = "1 - []\n2 - [*, *, *]";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the print function if the first row is full, but the second is empty
+     */
+    @Test
+    public void TestPrintFullRow1EmptyRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(2, 3);
+    	String board = "1 - [*, *, *]\n2 - []";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the print function if the first row is less than full and the second row has all its beads
+     */
+    @Test
+    public void TestPrintPartRow1FullRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(1, 1);
+    	String board = "1 - [*, *]\n2 - [*, *, *]";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the print function if the first and second rows have less than thier full capacities of beads
+     */
+    @Test
+    public void TestPrintPartRow1PartRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(1, 1);
+    	level.removeBeads(2, 2);
+    	String board = "1 - [*, *]\n2 - [*]";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();	
+    }
+    
+    /**
+     * Tests the print function if the first row has is partially full and the second row is empty of beads
+     */
+    @Test
+    public void TestPrintPartRow1EmptyRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(1, 1);
+    	level.removeBeads(2, 3);
+    	String board = "1 - [*, *]\n2 - []";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the print function if the first row is full of beads, but the second row has less than full capacity
+     */
+    @Test
+    public void TestPrintFullRow1PartRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(2, 1);
+    	String board = "1 - [*, *, *]\n2 - [*, *]";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
+    }
+    
+    /**
+     * Tests the print function if the first row has no beads and the second row has less than full capacity
+     */
+    @Test
+    public void TestPrintEmptyRow1PartRow2(){
+    	setUpStream();
+    	Level level = new EasyLevel();
+    	level.removeBeads(1, 3);
+    	level.removeBeads(2, 1);
+    	String board = "1 - []\n2 - [*, *]";
+    	assertEquals(board, outContent.toString());
+    	cleanUpStream();
     }
 }
