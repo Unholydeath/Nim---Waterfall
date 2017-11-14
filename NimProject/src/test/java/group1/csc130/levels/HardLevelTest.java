@@ -15,7 +15,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	@Test
 	public void TestGetNumRows(){
 		Level level = new HardLevel();
-		assertEquals((int)4, level.getNumRows());
+		assertEquals(4, level.getNumRows());
 	}
 	
 	/**
@@ -24,7 +24,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	@Test
 	public void TestInitaialRow1Value(){
 		Level level = new HardLevel();
-		assertEquals((int)2, level.getBeadAmount(1));
+		assertEquals(2, level.getBeadAmount(1));
 	}
 	
 	/**
@@ -34,7 +34,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemoveBeadFromRow1(){
     	Level level = new HardLevel();
     	level.removeBeads(1, 1);
-    	assertEquals((int)1, level.getBeadAmount(1));
+    	assertEquals(1, level.getBeadAmount(1));
     }
     
     /**
@@ -44,7 +44,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingAllBeadsFromRow1(){
     	Level level = new HardLevel();
     	level.removeBeads(1, 2);
-    	assertEquals((int)0, level.getBeadAmount(1));
+    	assertEquals(0, level.getBeadAmount(1));
     }
     
     /**
@@ -54,7 +54,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingZeroBeadsFromRow1(){
     	Level level = new HardLevel();
     	level.removeBeads(1, 0);
-    	assertEquals((int)2, level.getBeadAmount(1));
+    	assertEquals(2, level.getBeadAmount(1));
     }
     
     /**
@@ -65,7 +65,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingTooManyBeadsFromRow1(){
     	Level level = new HardLevel();
     	level.removeBeads(1, 5);
-    	assertEquals((int)2, level.getBeadAmount(1));
+    	assertEquals(2, level.getBeadAmount(1));
     }
     
     /**
@@ -76,7 +76,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingNegativeBeadsFromRow1(){
     	Level level = new HardLevel();
     	level.removeBeads(1, -3);
-    	assertEquals((int)2, level.getBeadAmount(1));
+    	assertEquals(2, level.getBeadAmount(1));
     }
     
     /**
@@ -85,7 +85,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     @Test
     public void TestInitialRow2Value(){
     	Level level = new HardLevel();
-    	assertEquals((int)3, level.getBeadAmount(2));
+    	assertEquals(3, level.getBeadAmount(2));
     }
 	
     /**
@@ -95,7 +95,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemoveBeadsFromRow2(){
     	Level level = new HardLevel();
     	level.removeBeads(2, 2);
-    	assertEquals((int)1, level.getBeadAmount(2));
+    	assertEquals(1, level.getBeadAmount(2));
     }
     
     /**
@@ -105,7 +105,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingAllBeadsFromRow2(){
     	Level level = new HardLevel();
     	level.removeBeads(2, 3);
-    	assertEquals((int)0, level.getBeadAmount(2));
+    	assertEquals(0, level.getBeadAmount(2));
     }
     
     /**
@@ -115,7 +115,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingZeroBeadsFromRow2(){
     	Level level = new HardLevel();
     	level.removeBeads(2, 0);
-    	assertEquals((int)3, level.getBeadAmount(2));
+    	assertEquals(3, level.getBeadAmount(2));
     }
     
     /**
@@ -126,7 +126,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingTooManyBeadsFromRow2(){
     	Level level = new HardLevel();
     	level.removeBeads(2, 8);
-    	assertEquals((int)3, level.getBeadAmount(2));
+    	assertEquals(3, level.getBeadAmount(2));
     }
     
     /**
@@ -137,7 +137,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingNegativeBeadsFromRow2(){
     	Level level = new HardLevel();
     	level.removeBeads(2, -3);
-    	assertEquals((int)3, level.getBeadAmount(2));
+    	assertEquals(3, level.getBeadAmount(2));
     }
     
     /**
@@ -146,7 +146,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     @Test
     public void TestInitialRow3Value(){
     	Level level = new HardLevel();
-    	assertEquals((int)8, level.getBeadAmount(3));
+    	assertEquals(8, level.getBeadAmount(3));
     }
 	
     /**
@@ -156,7 +156,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemoveBeadsFromRow3(){
     	Level level = new HardLevel();
     	level.removeBeads(3, 5);
-    	assertEquals((int)3, level.getBeadAmount(3));
+    	assertEquals(3, level.getBeadAmount(3));
     }
     
     /**
@@ -166,7 +166,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingAllBeadsFromRow3(){
     	Level level = new HardLevel();
     	level.removeBeads(3, 8);
-    	assertEquals((int)0, level.getBeadAmount(3));
+    	assertEquals(0, level.getBeadAmount(3));
     }
     
     /**
@@ -176,7 +176,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingZeroBeadsFromRow3(){
     	Level level = new HardLevel();
     	level.removeBeads(3, 0);
-    	assertEquals((int)8, level.getBeadAmount(3));
+    	assertEquals(8, level.getBeadAmount(3));
     }
     
     /**
@@ -187,7 +187,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingTooManyBeadsFromRow3(){
     	Level level = new HardLevel();
     	level.removeBeads(3, 12);
-    	assertEquals((int)8, level.getBeadAmount(3));
+    	assertEquals(8, level.getBeadAmount(3));
     }
     
     /**
@@ -198,7 +198,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingNegativeBeadsFromRow3(){
     	Level level = new HardLevel();
     	level.removeBeads(3, -3);
-    	assertEquals((int)8, level.getBeadAmount(3));
+    	assertEquals(8, level.getBeadAmount(3));
     }
     
     /**
@@ -207,7 +207,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     @Test
     public void TestInitialRow4Value(){
     	Level level = new HardLevel();
-    	assertEquals((int)9, level.getBeadAmount(4));
+    	assertEquals(9, level.getBeadAmount(4));
     }
 	
     /**
@@ -217,7 +217,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemoveBeadsFromRow4(){
     	Level level = new HardLevel();
     	level.removeBeads(4, 6);
-    	assertEquals((int)3, level.getBeadAmount(4));
+    	assertEquals(3, level.getBeadAmount(4));
     }
     
     /**
@@ -227,7 +227,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingAllBeadsFromRow4(){
     	Level level = new HardLevel();
     	level.removeBeads(4, 9);
-    	assertEquals((int)0, level.getBeadAmount(4));
+    	assertEquals(0, level.getBeadAmount(4));
     }
     
     /**
@@ -237,7 +237,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingZeroBeadsFromRow4(){
     	Level level = new HardLevel();
     	level.removeBeads(4, 0);
-    	assertEquals((int)9, level.getBeadAmount(4));
+    	assertEquals(9, level.getBeadAmount(4));
     }
     
     /**
@@ -248,7 +248,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingTooManyBeadsFromRow4(){
     	Level level = new HardLevel();
     	level.removeBeads(4, 12);
-    	assertEquals((int)9, level.getBeadAmount(4));
+    	assertEquals(9, level.getBeadAmount(4));
     }
     
     /**
@@ -259,7 +259,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public void TestRemovingNegativeBeadsFromRow4(){
     	Level level = new HardLevel();
     	level.removeBeads(4, -3);
-    	assertEquals((int)9, level.getBeadAmount(4));
+    	assertEquals(9, level.getBeadAmount(4));
     }
    
     /**
@@ -268,9 +268,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow1To3(){
-    	MedLevel med = new MedLevel();
-    	med.setRow1(3);
-    	assertEquals((int)3, med.getBeadAmount(1));
+    	HardLevel hardLevel = new HardLevel();
+    	hardLevel.setRow1(3);
+    	assertEquals(3, hardLevel.getBeadAmount(1));
     }
     
     /**
@@ -279,9 +279,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow1To0(){
-    	MedLevel med = new MedLevel();
-    	med.setRow1(0);
-    	assertEquals((int)0, med.getBeadAmount(1));
+    	HardLevel hardLevel = new HardLevel();
+    	hardLevel.setRow1(0);
+    	assertEquals(0, hardLevel.getBeadAmount(1));
     }
     
     /**
@@ -289,10 +289,10 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow1ToNegative(){
-    	MedLevel med = new MedLevel();
-    	int currentBeads = med.getBeadAmount(1);
-    	med.setRow1(-6);
-    	assertEquals(currentBeads, med.getBeadAmount(1));
+    	HardLevel hardLevel = new HardLevel();
+    	int currentBeads = hardLevel.getBeadAmount(1);
+    	hardLevel.setRow1(-6);
+    	assertEquals(currentBeads, hardLevel.getBeadAmount(1));
     }
     
     /**
@@ -301,9 +301,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow2To3(){
-    	MedLevel med = new MedLevel();
-    	med.setRow2(3);
-    	assertEquals((int)3, med.getBeadAmount(2));
+    	HardLevel hardLevel = new HardLevel();
+    	hardLevel.setRow2(3);
+    	assertEquals(3, hardLevel.getBeadAmount(2));
     }
     
     /**
@@ -312,9 +312,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow2To0(){
-    	MedLevel med = new MedLevel();
-    	med.setRow2(0);
-    	assertEquals((int)0, med.getBeadAmount(2));
+    	HardLevel hardLevel = new HardLevel();
+    	hardLevel.setRow2(0);
+    	assertEquals(0, hardLevel.getBeadAmount(2));
     }
     
     /**
@@ -322,10 +322,10 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow2ToNegative(){
-    	MedLevel med = new MedLevel();
-    	int currentBeads = med.getBeadAmount(2);
-    	med.setRow2(-6);
-    	assertEquals(currentBeads, med.getBeadAmount(2));
+    	HardLevel hardLevel = new HardLevel();
+    	int currentBeads = hardLevel.getBeadAmount(2);
+    	hardLevel.setRow2(-6);
+    	assertEquals(currentBeads, hardLevel.getBeadAmount(2));
     }
     
     /**
@@ -334,9 +334,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow3To3(){
-    	MedLevel med = new MedLevel();
-    	med.setRow3(3);
-    	assertEquals((int)3, med.getBeadAmount(3));
+    	HardLevel hardLevel = new HardLevel();
+    	hardLevel.setRow3(3);
+    	assertEquals((int)3, hardLevel.getBeadAmount(3));
     }
     
     /**
@@ -345,9 +345,9 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow3To0(){
-    	MedLevel med = new MedLevel();
-    	med.setRow3(0);
-    	assertEquals((int)0, med.getBeadAmount(3));
+    	HardLevel hardLevel = new HardLevel();
+    	hardLevel.setRow3(0);
+    	assertEquals((int)0, hardLevel.getBeadAmount(3));
     }
     
     /**
@@ -355,10 +355,10 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestSettingRow3ToNegative(){
-    	MedLevel med = new MedLevel();
-    	int currentBeads = med.getBeadAmount(3);
-    	med.setRow3(-6);
-    	assertEquals(currentBeads, med.getBeadAmount(3));
+    	HardLevel hardLevel = new HardLevel();
+    	int currentBeads = hardLevel.getBeadAmount(3);
+    	hardLevel.setRow3(-6);
+    	assertEquals(currentBeads, hardLevel.getBeadAmount(3));
     }
     
     /**
@@ -366,7 +366,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TesWinCheckAllRowsEmpty(){
-    	Level level = new MedLevel();
+    	Level level = new HardLevel();
     	level.removeBeads(1, 2);
     	level.removeBeads(2, 5);
     	level.removeBeads(3, 7);
@@ -378,7 +378,7 @@ private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
      */
     @Test
     public void TestWinCheckAllRowsFull(){
-    	Level level = new MedLevel();
+    	Level level = new HardLevel();
     	assertFalse(level.WinCheck());
     }
 }
