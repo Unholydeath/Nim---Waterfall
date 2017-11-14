@@ -1,4 +1,12 @@
 package group1.csc130.models;
+
+/**
+ * The Player class hold the data associated with a single player
+ * The player has a name, PlayerType, and can make bead or row choices if they're a computer
+ * 
+ * @author Braden Bodily, Tina Moore, Isaiah Camara
+ */
+
 public class Player {
 
 	public enum PlayerType{

@@ -2,6 +2,13 @@ package group1.csc130.models;
 
 import java.util.Random;
 
+/**
+ * The Computer class inherits from the Player class and implements the makeRowChoice() and makeBeadChoice functions
+ * The Computer class is instantiated with the "Computer" name and COMPUTER PlayerType
+ * 
+ * @author Braden Bodily, Tina Moore, Isaiah Camara
+ */
+
 public class Computer extends Player {
 	
 	private Random m_random;
