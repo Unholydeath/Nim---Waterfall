@@ -11,7 +11,7 @@ public class ValidationTests {
 
 	@Test
 	//Tests for choosing the opponent 
-	public void OpponetTypeTest() {
+	public void OpponetTypeTest() { 
 		Game gg = new Game(); 
 		
 	}
@@ -34,13 +34,31 @@ public class ValidationTests {
 	@Test
 	public void testForException(){}
 	
-	//Test for valid user moves
+	//Test for valid user moves for easy
 	@Test
-	public void testForValidPlayerMoves(){}
+	public void testForValidEasyMoves(){}
 	
-	//Test for inValid user moves
+	//Test for inValid user moves for easy
 	@Test
-	public void testForInvalidHandle(){}
+	public void testForInvalidHandleEasy(){}
+	
+	
+	//Test for valid user moves for medium 
+	@Test
+	public void testForValidMedMoves(){}
+	
+	//Test for inValid user moves for medium
+	@Test
+	public void testForInvalidHandleMed(){} 
+	
+	
+	//Test for valid user moves for hard
+	@Test
+	public void testForValidHardMoves(){}
+	
+	//Test for inValid user moves for hard
+	@Test
+	public void testForInvalidHandleHard(){} 
 	  
 
 }
