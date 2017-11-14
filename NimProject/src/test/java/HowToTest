@@ -1,8 +1,0 @@
-1) Test only one thing at a time
-2) Test Everything (aka get granular)
-3) Each test should think it's the only test
-    3a) No test should depend on the consequences of any other test
-4) Every test should assume it starts anew
-    //Set up
-    //Act
-    //Assert
