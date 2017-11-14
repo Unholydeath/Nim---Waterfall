@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 import java.io.ByteArrayOutputStream;
 
 public class HardLevelTest {
-private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
 	/**
 	 * Should return 4, the number of rows of a hard level board
